@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malla Ingeniería en Construcción</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+    <h1>Malla Curricular - Ingeniería en Construcción</h1>
+    <button id="btnModoOscuro"
+        style="position: fixed; top: 20px; right: 20px; padding: 10px 15px; border:none; border-radius: 8px; background:#b84f70; color:#fce6ee; font-weight:bold; cursor:pointer; z-index:1100;">
+        🌙 Modo Oscuro
+    </button>
+
+    <div id="felicitaciones">¡FELICIDADES MAU ERES SECA!</div>
+
+    <div id="contenedor-malla">
+
+        <!-- Año 1 -->
+        <div class="anio dos-semestres">
+            <h2>Año 1</h2>
+            <div class="semestres">
+                <div class="semestre">
+                    <h3>Semestre 1</h3>
+                    <div class="ramo" data-id="NMAT1001" data-requisitos="">ÁLGEBRA</div>
+                    <div class="ramo" data-id="ICTD1002" data-requisitos="">CONSTRUCCIÓN GENERAL</div>
+                    <div class="ramo" data-id="ICTD1001" data-requisitos="">MATERIALES DE CONSTRUCCIÓN</div>
+                    <div class="ramo" data-id="ICTD1003" data-requisitos="">TALLER DE CONSTRUCCIÓN</div>
+                    <div class="ramo" data-id="ICTD1006" data-requisitos="">TOPOGRAFÍA</div>
+                </div>
+                <div class="semestre">
+                    <h3>Semestre 2</h3>
+                    <div class="ramo bloqueado" data-id="NMAT1005" data-requisitos="NMAT1001">CÁLCULO</div>
+                    <div class="ramo bloqueado" data-id="FGUM1501" data-requisitos="NMAT1001">COMPETENCIAS ACADÉMICAS
+                        UNIVERSITARIAS</div>
+                    <div class="ramo bloqueado" data-id="NMAT1013" data-requisitos="NMAT1001">FÍSICA</div>
+                    <div class="ramo bloqueado" data-id="ICTD1004" data-requisitos="NMAT1001">INTERPRETACIÓN DE PLANOS
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1005" data-requisitos="ICTD1001">TECNOLOGÍA DEL HORMIGÓN
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Año 2 -->
+        <div class="anio dos-semestres">
+            <h2>Año 2</h2>
+            <div class="semestres">
+                <div class="semestre">
+                    <h3>Semestre 3</h3>
+                    <div class="ramo bloqueado" data-id="NMAT1006" data-requisitos="NMAT1005">CÁLCULO INTEGRAL</div>
+                    <div class="ramo bloqueado" data-id="GEUM1004" data-requisitos="NMAT1005">GEOMETRÍA</div>
+                    <div class="ramo bloqueado" data-id="NMAT1010" data-requisitos="NMAT1005">ESTADÍSTICA</div>
+                    <div class="ramo bloqueado" data-id="ICTD1007" data-requisitos="ICTD1005">INSTALACIONES SANITARIAS Y
+                        GAS</div>
+                    <div class="ramo bloqueado" data-id="ICTD1008" data-requisitos="ICTD1005">SISTEMAS CONSTRUCTIVOS EN
+                        HORMIGÓN</div>
+                </div>
+                <div class="semestre">
+                    <h3>Semestre 4</h3>
+                    <div class="ramo bloqueado" data-id="ICTD1009" data-requisitos="ICTD1002">EDIFICACIÓN I</div>
+                    <div class="ramo bloqueado" data-id="ICTD1010" data-requisitos="NMAT1006,NMAT1013">DISEÑO
+                        ESTRUCTURAL</div>
+                    <div class="ramo bloqueado" data-id="ICTD1012" data-requisitos="ICTD1009">EDIFICACIÓN II</div>
+                    <div class="ramo bloqueado" data-id="ICTD1011" data-requisitos="NMAT1013">INSTALACIONES ELÉCTRICAS
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1017" data-requisitos="NMAT1010">PROGRAMACIÓN Y CONTROL DE
+                        OBRAS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Año 3 -->
+        <div class="anio dos-semestres">
+            <h2>Año 3</h2>
+            <div class="semestres">
+                <div class="semestre">
+                    <h3>Semestre 5</h3>
+                    <div class="ramo bloqueado" data-id="ICTD1013" data-requisitos="ICTD1009">CONSTRUCCIÓN SUSTENTABLE
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1014" data-requisitos="ICTD1010">COMPORTAMIENTO ESTRUCTURAL
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTB1001" data-requisitos="ICTD1010">CONTABILIDAD FINANCIERA
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1015" data-requisitos="ICTD1010">CUBICACIÓN Y ANÁLISIS DE
+                        COSTOS</div>
+                    <div class="ramo bloqueado" data-id="ICTD1016" data-requisitos="ICTD1010">EFICIENCIA ENERGÉTICA EN
+                        LA EDIFICACIÓN</div>
+                </div>
+                <div class="semestre">
+                    <h3>Semestre 6</h3>
+                    <div class="ramo bloqueado" data-id="CERTII" data-requisitos="ICTD1015">CERTIFICACIÓN II</div>
+                    <div class="ramo bloqueado" data-id="ICTB1002" data-requisitos="ICTD1015">CREATIVIDAD Y
+                        EMPRENDIMIENTO</div>
+                    <div class="ramo bloqueado" data-id="ICTD1019" data-requisitos="ICTD1004">FUNDAMENTOS DE METODOLOGÍA
+                        BIM</div>
+                    <div class="ramo bloqueado" data-id="CECIT110" data-requisitos="ICTD1019">APLICACIONES
+                        COMPUTACIONALES</div>
+                    <div class="ramo bloqueado" data-id="MEEL1103" data-requisitos="ICTD1019">PROYECTO VIP</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Año 4 -->
+        <div class="anio dos-semestres">
+            <h2>Año 4</h2>
+            <div class="semestres">
+                <div class="semestre">
+                    <h3>Semestre 7</h3>
+                    <div class="ramo bloqueado" data-id="CERTIII" data-requisitos="CERTII">CERTIFICACIÓN III</div>
+                    <div class="ramo bloqueado" data-id="ICTD1020" data-requisitos="ICTD1015">ADMINISTRACIÓN DE OBRAS
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1021" data-requisitos="ICTD1015">CONSTRUCCIÓN DE OBRAS
+                        CIVILES</div>
+                    <div class="ramo bloqueado" data-id="ICTD1022" data-requisitos="ICTD1019">COORDINACIÓN DE PROYECTOS
+                        BIM</div>
+                    <div class="ramo bloqueado" data-id="ICTD1023" data-requisitos="ICTD1018">URBANIZACIONES</div>
+                </div>
+                <div class="semestre">
+                    <h3>Semestre 8</h3>
+                    <div class="ramo bloqueado" data-id="ICTD1030" data-requisitos="ICTD1020">CONSTRUCCIÓN DE OBRAS
+                        VIALES</div>
+                    <div class="ramo bloqueado" data-id="ICTD1024" data-requisitos="ICTD1022">PRÁCTICA EN OBRA</div>
+                    <div class="ramo bloqueado" data-id="ICTD1026" data-requisitos="ICTD1020">GESTIÓN DE CALIDAD</div>
+                    <div class="ramo bloqueado" data-id="ICTD1027" data-requisitos="ICTD1020">MERCADO DE SUELOS Y
+                        TASACIÓN</div>
+                    <div class="ramo bloqueado" data-id="ICTD1028" data-requisitos="ICTD1020">LEGISLACIÓN DE LA
+                        CONSTRUCCIÓN</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Año 5 -->
+        <div class="anio dos-semestres">
+            <h2>Año 5</h2>
+            <div class="semestres">
+                <div class="semestre">
+                    <h3>Semestre 9</h3>
+                    <div class="ramo bloqueado" data-id="INGT1012" data-requisitos="ICTD1026">EV. ECONÓMICA Y FINANCIERA
+                        DE PROYECTOS</div>
+                    <div class="ramo bloqueado" data-id="ICTD1031" data-requisitos="ICTD1028">MARKETING Y DESARROLLO
+                        INMOBILIARIO</div>
+                    <div class="ramo bloqueado" data-id="ICTD1032" data-requisitos="ICTD1024">PREVENCIÓN DE RIESGOS
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1034" data-requisitos="ICTD1026">LIDERAZGO Y COMUNICACIÓN
+                    </div>
+                    <div class="ramo bloqueado" data-id="ICTD1035" data-requisitos="ICTD1024">PRÁCTICA PROFESIONAL</div>
+                </div>
+                <div class="semestre">
+                    <h3>Semestre 10</h3>
+                    <div class="ramo bloqueado" data-id="ICTD1036" data-requisitos="ICTD1035">PROYECTO DE TÍTULO</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="felicitaciones"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

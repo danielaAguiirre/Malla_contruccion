@@ -1,0 +1,209 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe4f0, #f9c5d1);
+    margin: 0;
+    padding: 20px;
+    color: #4a2c3b;
+}
+
+h1 {
+    text-align: center;
+    color: #7b3e57;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+#felicitaciones {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background: rgba(174, 49, 99, 0.9);
+    color: #f9e6eb;
+    font-weight: bold;
+    font-size: 1.8em;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(174, 49, 99, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.5s ease, transform 0.4s ease;
+    z-index: 1000;
+}
+
+#felicitaciones.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+}
+
+#contenedor-malla {
+    max-width: 1500px;
+    margin: 0 auto 50px;
+    background: #ffe6f0;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 25px rgba(123, 62, 87, 0.25);
+}
+
+.anio {
+    margin-bottom: 50px;
+    background: #f7c9d3;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(123, 62, 87, 0.15);
+}
+
+.anio h2 {
+    color: #7b3e57;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.semestres {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.semestre {
+    background: #d76f91;
+    border-radius: 15px;
+    padding: 25px 20px;
+    width: 48%;
+    box-shadow: 0 6px 18px rgba(123, 62, 87, 0.3);
+    transition: transform 0.3s ease;
+    cursor: default;
+    color: #fce6ee;
+}
+
+.semestre:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(123, 62, 87, 0.5);
+}
+
+.semestre h3 {
+    text-align: center;
+    color: #fce6ee;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(123, 62, 87, 0.5);
+}
+
+.ramo {
+    background: #b84f70;
+    border-radius: 12px;
+    padding: 15px 12px;
+    margin: 12px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    font-weight: 700;
+    color: #fbe9f1;
+    box-shadow: 0 5px 10px rgba(123, 62, 87, 0.4);
+    font-size: 16px;
+    user-select: none;
+}
+
+.ramo:hover:not(.bloqueado) {
+    transform: scale(1.08);
+    background: #a03f5a;
+    box-shadow: 0 8px 20px rgba(160, 63, 90, 0.8);
+}
+
+.ramo.aprobado {
+    background: #a8d5ba !important;
+    text-decoration: line-through;
+    box-shadow: 0 0 15px #82bf95;
+    color: #2f4f34;
+}
+
+.ramo.bloqueado {
+    background: #f3d5dc;
+    color: #a27a8c;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .semestres {
+        flex-wrap: wrap;
+    }
+    .semestre {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Estilos para modo oscuro */
+body.modo-oscuro {
+  background: linear-gradient(135deg, #2c2c2c, #121212);
+  color: #ddd;
+}
+
+body.modo-oscuro #contenedor-malla {
+  background: #1e1e1e;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+}
+
+body.modo-oscuro .anio {
+  background: #3a3a3a;
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.15);
+}
+
+body.modo-oscuro .anio h2 {
+  color: #ff77b7;
+}
+
+body.modo-oscuro .semestre {
+  background: #5a1f4a;
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.4);
+  color: #fce6ee;
+}
+
+body.modo-oscuro .semestre:hover {
+  box-shadow: 0 12px 25px rgba(255, 105, 180, 0.7);
+}
+
+body.modo-oscuro .semestre h3 {
+  color: #ff77b7;
+  text-shadow: 0 1px 3px rgba(255, 105, 180, 0.5);
+}
+
+body.modo-oscuro .ramo {
+  background: #8b3a6d;
+  color: #fbe9f1;
+  box-shadow: 0 5px 10px rgba(255, 105, 180, 0.6);
+}
+
+body.modo-oscuro .ramo:hover:not(.bloqueado) {
+  background: #a9458b;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.9);
+}
+
+body.modo-oscuro .ramo.aprobado {
+  background: #61a47d !important;
+  text-decoration: line-through;
+  box-shadow: 0 0 15px #74c599;
+  color: #e0f0e9;
+}
+
+body.modo-oscuro .ramo.bloqueado {
+  background: #5a5a5a;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+body.modo-oscuro #felicitaciones {
+  background: rgba(123, 14, 77, 0.9);
+  color: #f8cce7;
+  box-shadow: 0 8px 15px rgba(123, 14, 77, 0.7);
+}
