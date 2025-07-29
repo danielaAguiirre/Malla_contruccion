@@ -207,3 +207,31 @@ body.modo-oscuro #felicitaciones {
   color: #f8cce7;
   box-shadow: 0 8px 15px rgba(123, 14, 77, 0.7);
 }
+
+
+/* Ajuste especial para celulares */
+@media (max-width: 900px) {
+    #contenedor-malla {
+        padding: 20px;
+    }
+
+    .semestres {
+        flex-direction: column; /* Semestres uno debajo del otro */
+        align-items: center;
+        gap: 25px;
+    }
+
+    .semestre {
+        width: 90% !important; /* Más ancho para leer mejor */
+        min-width: unset;
+    }
+
+    .semestre h3 {
+        font-size: 1.4em;
+    }
+
+    .ramo {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+}
