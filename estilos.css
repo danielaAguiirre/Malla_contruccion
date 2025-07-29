@@ -49,10 +49,9 @@ h1 {
 
 .anio {
     margin-bottom: 50px;
-    background: #f7c9d3;
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(123, 62, 87, 0.15);
+    background: none;   /* Quitar el fondo rosa del año */
+    padding: 0;         /* Quitar espacio interno del año */
+    box-shadow: none;   /* Sin recuadro */
 }
 
 .anio h2 {
@@ -75,6 +74,7 @@ h1 {
     border-radius: 15px;
     padding: 25px 20px;
     width: 48%;
+    min-width: 350px;
     box-shadow: 0 6px 18px rgba(123, 62, 87, 0.3);
     transition: transform 0.3s ease;
     cursor: default;
@@ -130,16 +130,33 @@ h1 {
     box-shadow: none;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-    .semestres {
-        flex-wrap: wrap;
+/* Responsive para celulares */
+@media (max-width: 850px) {
+    #contenedor-malla {
+        padding: 15px;
     }
+
+    .semestres {
+        flex-direction: column; /* Semestres uno debajo del otro */
+        align-items: center;
+        gap: 25px;
+    }
+
     .semestre {
-        width: 100% !important;
-        margin-bottom: 20px;
+        width: 90% !important; /* en vez de 100%, para dejar espacio a los lados */
+        min-width: unset;
+    }
+
+    .semestre h3 {
+        font-size: 1.4em;
+    }
+
+    .ramo {
+        font-size: 14px;
+        padding: 12px 10px;
     }
 }
+
 
 
 /* Estilos para modo oscuro */
@@ -209,29 +226,3 @@ body.modo-oscuro #felicitaciones {
 }
 
 
-/* Ajuste especial para celulares */
-@media (max-width: 900px) {
-    #contenedor-malla {
-        padding: 20px;
-    }
-
-    .semestres {
-        flex-direction: column; /* Semestres uno debajo del otro */
-        align-items: center;
-        gap: 25px;
-    }
-
-    .semestre {
-        width: 90% !important; /* Más ancho para leer mejor */
-        min-width: unset;
-    }
-
-    .semestre h3 {
-        font-size: 1.4em;
-    }
-
-    .ramo {
-        font-size: 14px;
-        padding: 12px 10px;
-    }
-}
